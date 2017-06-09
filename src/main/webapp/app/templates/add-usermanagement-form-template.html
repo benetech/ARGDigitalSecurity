@@ -1,0 +1,65 @@
+	<div class="row">	
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="panel panel-default">
+						<div class="panel-body">
+						<h4><%= polyglot.t( useraccountmanagement.get('formTitle')) %></h4>
+						<form id="addUserMng" method="post">
+						  <div class="form-group">
+						    <label for="firstName"><%= polyglot.t('usermanagementName') %></label>
+						    <input type="text" maxlength="40" class="form-control" id="firstName" placeholder="<%= polyglot.t('usermanagementNamePlaceHolder') %>" value="<%= useraccountmanagement.get('firstName') %>" required>
+						    <small id="nameRequired" hidden="hidden" class="form-text text-muted"><%= polyglot.t('nameRequired') %></small>
+						    <small id="nameInvalid" hidden="hidden" class="form-text text-muted"><%= polyglot.t('nameInvalid') %></small>
+						    
+						  </div>
+						  <div class="form-group">
+						    <label for="lastName"><%= polyglot.t('usermanagementLastName') %></label>
+						    <input type="text" maxlength="40" class="form-control" id="lastName" placeholder="<%= polyglot.t('usermanagementLastNamePlaceHolder') %>" value="<%= useraccountmanagement.get('lastName') %>" required>
+						    <small id="lastNameRequired" hidden="hidden" class="form-text text-muted"><%= polyglot.t('lastNameRequired') %></small>
+						    <small id="lastNameInvalid" hidden="hidden" class="form-text text-muted"><%= polyglot.t('lastNameInvalid') %></small>
+						  </div>
+						  <div class="form-group">
+						  	<label for="email"><%= polyglot.t('usermanagementEmail') %></label>
+						    <input type="text" maxlength="40" class="form-control" id="email" placeholder="<%= polyglot.t('usermanagementEmailPlaceHolder') %>" value="<%= useraccountmanagement.get('email') %>" required>
+						    <small id="emailRequired" hidden="hidden" class="form-text text-muted"><%= polyglot.t('emailRequired') %></small>
+						    <small id="emailWrongFormat" hidden="hidden" class="form-text text-muted"><%= polyglot.t('emailWrongFormat') %></small>
+						    <small id="usermanagementEmailHelp" hidden="hidden" class="form-text text-muted"><%= polyglot.t('usermanagementEmailHelp') %></small>
+						  </div>
+						  <div class="form-group">
+						    <label for="phone"><%= polyglot.t('usermanagementPhone') %></label>
+						    <input type="tel" maxlength="40" class="form-control" id="phone" placeholder="<%= polyglot.t('usermanagementPhonePlaceHolder') %>"
+								value="<%= useraccountmanagement.get('phone') %>">
+						    <small id="phoneRequired" hidden="hidden" class="form-text text-muted"><%= polyglot.t('phoneRequired') %></small>
+						    <small id="phoneNumeric" hidden="hidden" class="form-text text-muted"><%= polyglot.t('phoneNumeric') %></small>
+						    <small id="phoneHelp" hidden="hidden" class="form-text text-muted"><%= polyglot.t('fieldWorkerPhoneHelp') %></small>
+						  </div>
+						  <div class="form-group">
+						    <label for="login"><%= polyglot.t('usermanagementLogin') %></label>
+						    <input type="text" maxlength="40" class="form-control" id="username" placeholder="<%= polyglot.t('usermanagementLoginPlaceHolder') %>" value="<%= useraccountmanagement.get('username') %>" required>
+						    <small id="usernameRequired" hidden="hidden" class="form-text text-muted"><%= polyglot.t('usernameRequired') %></small>
+						    <small id="loginInvalid" hidden="hidden" class="form-text text-muted"><%= polyglot.t('loginInvalid') %></small>
+						    <small id="usermanagementLoginHelp" hidden="hidden" class="form-text text-muted"><%= polyglot.t('usermanagementLoginHelp') %></small>
+						    
+						  </div>
+						  <div class="form-group">
+						    <label for="password"><%= polyglot.t('usermanagementPassword') %></label>
+						    <%if(!this.isEdit){%>
+						    <input maxlength="40" type="password" class="form-control" id="password" placeholder="<%= polyglot.t('usermanagementPasswordPlaceHolder') %>" value="<%= useraccountmanagement.get('password') %>" required>
+						    <%}else{%>
+						    	<div class="input-group">
+						    	<input maxlength="40" readonly type="password" class="form-control" id="password" placeholder="<%= polyglot.t('usermanagementPasswordPlaceHolder') %>" value="<%= useraccountmanagement.get('password') %>" required>
+						    	<span class="input-group-btn">
+						    		<button id="resetPwd" type="button" class="btn btn-link pull-right">&nbsp;[<%= polyglot.t('resetPassword') %>]</button>
+						    	</span>
+						    	</div>
+						    <%}%>
+						    <small id="passwordRequired" hidden="hidden" class="form-text text-muted"><%= polyglot.t('passwordRequired') %></small>
+						    <small id="passwordInvalid" hidden="hidden" class="form-text text-muted"><%= polyglot.t('passwordInvalid') %></small>
+						  </div>
+						  <button id="cancelMng" type="button" class="btn btn-danger pull-right">&nbsp;<%= polyglot.t('fieldWorkerCancel') %></button>
+						  <button id="saveMng" type="submit" class="btn btn-success pull-right"><i class="glyphicon glyphicon-floppy-saved" ></i>&nbsp;<%= polyglot.t('usermanagementSave') %></button>
+						</form>
+						</div>
+					</div>
+				</div>
+				
+	</div>

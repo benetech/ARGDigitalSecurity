@@ -1,0 +1,91 @@
+<!--
+	Author Bryan Barrantes
+	
+	Module Management main view 
+	
+	-->
+
+<div class="row" id="module-management">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="inner-addon left-addon">
+                            <h3><%= polyglot.t('moduleManagement') %></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4">
+                        <div class="form-group">
+                            <form id="fileUploadForm" method="POST" enctype="multipart/form-data"
+                                  action="/rest/module/upload">
+                                <label class="control-label"><%= polyglot.t('moduleTabDirections') %>
+                                </label>
+                                <input type="file" name="file"
+                                       class="filestyle btn btn-default"
+                                       data-icon="false">
+                                <button type="submit" class="btn btn-default">                                    <%= polyglot.t('moduleButton') %>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="row modules-list">
+                    <% _.each(modulesInfo, function(moduleInfo) {%>
+                    <div class="col-sm-6 col-md-4 col-lg-2 dashboard-column">
+                        <div class="panel <%= statusClass(moduleInfo) %>"
+                             id="userIndividual">
+
+                            <div class="panel-heading">
+                            	<p data-toggle="popover"  data-placement="top" data-content="<%=moduleInfo.name %>" >
+                            	<% if (moduleInfo.name.length > 20) { %>
+                                	<%= moduleInfo.name.substr(0,20) %>
+                                	
+								<% } else { %>
+                                 <%= moduleInfo.name %>
+								<% } %>
+                               
+                            </div>
+                            <div class="panel-body">
+                                <p data-toggle="popover"  data-placement="top" data-content="<%=moduleInfo.description %>" >
+                                	<span style="font-weight: bold;word-break: break-word;"><%= polyglot.t('description') %>: </span>
+                                <% if (moduleInfo.description.length > 20) { %>
+                                	<%= moduleInfo.description.substr(0,20) %>
+                                	
+								<% } else { %>
+                                <%= moduleInfo.description %>
+								<% } %>
+                                </p>
+                                <p><span style="font-weight: bold;"><%= polyglot.t('author') %>: </span><%= moduleInfo.createdBy %></p>
+								<p><span style="font-weight: bold;"><%= polyglot.t('startDate') %>: </span><%= moduleInfo.startDate %></p>
+                                <p><span style="font-weight: bold;"><%= polyglot.t('status') %>: </span><%= moduleInfo.status %></p>
+                            </div>
+
+                            <div class="panel-footer">
+                                <a href="#" id="stepsInfoModule"
+                                   data-id="<%= moduleInfo.id %>" data-toggle="tooltip"  data-trigger="hover" data-placement="top"
+                                   title="<%= polyglot.t('tooltipShowSteps') %>"
+                                   class="btn btn-primary">
+                                    <span class="glyphicon glyphicon-eye-open"></span>
+                                </a>
+                                <% if (moduleInfo.status != 'completed') { %>
+                                <a href="#" id="unlinkModule"
+                                   data-id="<%= moduleInfo.id %>" data-toggle="tooltip"  data-trigger="hover" data-placement="top"
+                                   title="<%= polyglot.t('tooltipDeleteModule') %>"
+                                   class="btn btn-danger">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </a>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                    <% }) %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="stepsModal"></div>

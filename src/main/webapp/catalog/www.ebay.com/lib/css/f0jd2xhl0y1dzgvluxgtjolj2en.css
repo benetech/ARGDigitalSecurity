@@ -1,0 +1,888 @@
+@charset "utf-8";
+h1 {
+    padding-top: 10px
+}
+.newphonediv {
+    padding: 0 0 0 30px
+}
+#updateProfilePhone ul {
+    padding: 13px 0 0 0
+}
+#updateProfilePhone ul li {
+    padding-bottom: 5
+}
+#radioButton0 ul {
+    padding-bottom: 0
+}
+#newnumbertext {
+    margin: 0
+}
+#wrapper {
+    margin: 30px;
+    padding-right: 75px
+}
+#wrapperhelp {
+    margin: 30px;
+    max-height: 400px
+}
+a {
+    text-decoration: none;
+    font-size: 14px
+}
+#ebaylogo {
+    float: left;
+    width: 130px;
+    height: 52px
+}
+.statusmsg {
+    font-size: 16px
+}
+h3 {
+    line-height: 1.1em;
+    padding: 10px 0;
+    font-weight: bold
+}
+h4 {
+    font-size: 16px
+}
+p {
+    font-size: 16px
+}
+ol#bc {
+    clear: both;
+    font-size: 12px;
+    height: 12px;
+    list-style: none outside none;
+    margin: 5px 20px 20px 5px
+}
+.clear {
+    clear: both;
+    height: 0;
+    width: 0
+}
+.pageContent {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 4px 4px 1px #eee;
+    padding: 20px;
+    margin: 20px 0;
+    font-size: 16px
+}
+.c-t {
+    color: #333;
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 20px
+}
+select {
+    border: 1px solid #ccc;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    padding: 4px 6px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
+    vertical-align: middle;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    line-height: 30px
+}
+.pageContent input[type="radio"] {
+    margin-top: -4px;
+    font-size: 16px
+}
+.radiobtn li {
+    list-style-type: none;
+    padding: 10px 0
+}
+#fullscale {
+    padding: 15px 0 0 10px
+}
+#logout {
+    font-size: .85em;
+    font-weight: bold;
+    margin-left: 20px
+}
+#alternates {
+    margin-top: 10px
+}
+#alternates li {
+    margin-left: 15px;
+    padding-top: 5px
+}
+.radioList li {
+    list-style-type: none;
+    padding: 10px 0
+}
+#fullscale {
+    display: block
+}
+#mobscale {
+    display: none
+}
+#glbfooter {
+    background: inherit;
+    clear: both;
+    min-width: 100px;
+    margin-top: 50px;
+    padding: 40px 0
+}
+body .gf-t,
+#glbfooter .gf-t {
+    margin: 0;
+    width: 100%
+}
+input[type="text"] {
+    font-size: 1em;
+    margin: 3px 0 0 20px;
+    padding: .6em;
+    font-size: 16px
+}
+.pageContent label {
+    font-size: 1em;
+    font-size: 16px
+}
+.pageContent p {
+    line-height: 20px;
+    padding: 5px 0;
+    font-size: 16px
+}
+#agreeText {
+    padding: 20px 0 5px;
+    max-width: 485px
+}
+.primsecbtns .btn {
+    padding-top: 10px
+}
+.btn-ter {
+    width: 75%;
+    height: 90%
+}
+#mobfooter {
+    text-align: center;
+    padding-top: 40px;
+    display: none;
+    clear: left
+}
+.fpipe {
+    color: #bababa;
+    line-height: 2em;
+    text-align: center;
+    padding: 0 5px
+}
+p.sm-md {
+    font-size: .88em;
+    padding: 0
+}
+.sm-co i,
+.sm-co p.sm-md {
+    margin-top: 0
+}
+.error {
+    margin-left: 20px
+}
+.hide {
+    display: none
+}
+.mobile {
+    display: none
+}
+.text-size-b {
+    line-height: 19px;
+    color: #333;
+    display: block;
+    font-size: 16px
+}
+.spacer-16 {
+    display: block;
+    margin-bottom: 16px
+}
+.bubble {
+    display: block;
+    background-color: #fff;
+    border: 1px solid #c1c1c1;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    overflow: visible;
+    position: absolute;
+    padding: 0 20px 20px 20px;
+    margin-top: 5px;
+    z-index: 2001
+}
+.bubble-arrow {
+    border-color: transparent transparent #FFF transparent;
+    border-style: solid;
+    border-width: 0 7px 7px 7px;
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: -7px
+}
+.bubble-arrow-border {
+    border-color: transparent transparent rgba(0, 0, 0, 0.25) transparent;
+    border-style: solid;
+    border-width: 0 7px 7px 7px;
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: -8px
+}
+#mobcsBtn {
+    display: none
+}
+.bubble-text {
+    margin: 30px 0 0 0;
+    display: block
+}
+#mobcsview {
+    display: none
+}
+#csview {
+    word-wrap: break-word;
+    font-size: 16px;
+    color: #777;
+    width: 510px;
+    line-height: 1.2
+}
+#livehelp {
+    font-size: 15px
+}
+sup {
+    vertical-align: 1px;
+    color: #666
+}
+#callText {
+    padding-top: 10px
+}
+#disclaimer {
+    font-size: 10px;
+    color: #666;
+    padding: 5px 5px 10px
+}
+@media screen and (max-width: 768px) and (min-width: 480px) {
+    #wrapper {
+        padding-right: 75px
+    }
+    #ebaylogo {
+        display: block
+    }
+    .mobile {
+        display: none
+    }
+    .desktop {
+        display: block
+    }
+    body {
+        font-size: 16px
+    }
+    .pageContent {
+        padding: 25px
+    }
+    #mobcsBtn {
+        display: none
+    }
+    #callText {
+        padding-top: 10px
+    }
+}
+@media screen and (max-width: 480px) {
+    #csview {
+        display: none
+    }
+    #mobcsview {
+        display: block
+    }
+    #mobcsview {
+        word-wrap: break-word;
+        font-size: 16px;
+        color: #777;
+        width: 250px;
+        line-height: 1.2
+    }
+    #livehelp {
+        font-size: 14px
+    }
+    #mobcsBtn {
+        display: block
+    }
+    #mobcsBtn .btn {
+        width: 85%;
+        height: 1.6em;
+        line-height: 24px
+    }
+    #csviewBtn {
+        display: none
+    }
+    .mobile {
+        display: block;
+        font-size: 14px
+    }
+    .desktop {
+        display: none
+    }
+    #ebaylogo {
+        display: block
+    }
+    html body {
+        font-size: 13px;
+        line-height: 1.5
+    }
+    h1 {
+        padding-top: 10px;
+        clear: both
+    }
+    h3 {
+        font-size: 1.05em
+    }
+    #callText {
+        padding-top: 10px;
+        line-height: 1.3em
+    }
+    #wrapper {
+        margin: 20px;
+        padding-right: 0
+    }
+    .pageContent {
+        max-width: 480px;
+        padding: 15px 15px 20px;
+        font-size: 16px
+    }
+    .pageContent p {
+        font-size: 15px;
+        line-height: 20px;
+        padding: 5px 0
+    }
+    .pageContent input[type="text"] {
+        margin: 10px 5px 0
+    }
+    #agreeText {
+        padding-top: 15px
+    }
+    #mobscale {
+        display: block
+    }
+    #fullscale {
+        display: none
+    }
+    .mi-er {
+        font-size: .93em;
+        line-height: 15px
+    }
+    .errspan {
+        font-size: .85em
+    }
+    .btn {
+        margin-bottom: 10px;
+        width: 90%;
+        border: 1px solid #DDD;
+        height: 2.6em
+    }
+    #glbfooter {
+        display: none
+    }
+    #mobfooter {
+        display: block
+    }
+    select {
+        width: 100%
+    }
+    .error {
+        margin-left: 0
+    }
+    .btn {
+        width: 100%
+    }
+    #disclaimer {
+        font-size: 10px;
+        color: #666;
+        padding: 5px;
+        line-height: 1.2
+    }
+    .c-t {
+        font-size: 20px;
+        margin-bottom: 20px;
+        margin-top: 15px
+    }
+}
+@charset "utf-8";
+.wrapper {
+    margin: 30px
+}
+#ebaylogo {
+    float: left;
+    width: 130px;
+    height: 52px
+}
+h2 {
+    font-size: 1.25em;
+    font-weight: bold;
+    padding-bottom: 10px
+}
+#mob-pwd-strng {
+    display: none
+}
+#fullscale {
+    padding: 0
+}
+#help-link {
+    font-weight: bold
+}
+h1 {
+    padding-top: 10px
+}
+h3 {
+    line-height: 1.1em;
+    padding: 10px 0;
+    font-weight: bold
+}
+.clear {
+    clear: both;
+    height: 0;
+    width: 0
+}
+.content {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 4px 4px 1px #eee;
+    padding: 20px;
+    margin: 20px 0
+}
+h3 {
+    padding-bottom: 10px;
+    font-weight: bold
+}
+.content form {
+    padding: 15px 0 0 10px
+}
+.primsecbtns {
+    margin-top: 18px
+}
+#large input[type="text"] {
+    font-size: 1em;
+    margin: 0;
+    padding: .6em
+}
+#large label {
+    font-size: 1em;
+    display: block;
+    margin: 10px 0
+}
+p {
+    line-height: 20px;
+    padding: 5px 0
+}
+.btn-m {
+    font-size: 16px
+}
+p.subheader {
+    font-size: .88em;
+    padding: 50px 0 10px 20px
+}
+.sm-co p.sm-md {
+    font-size: 16px
+}
+ul {
+    font-size: .88em
+}
+.statusmsg {
+    font-size: 16px
+}
+#mobfooter {
+    text-align: center;
+    padding-top: 40px;
+    display: none;
+    clear: left
+}
+.sm-co p {
+    font-size: 1.25em;
+    padding: 0
+}
+span.clr {
+    padding: 20px 0 10px
+}
+.error {
+    margin-left: 20px
+}
+.ebaylogo {
+    background-image: url("https://securepics.ebaystatic.com/aw/pics/cmp/ds3/sprds3_11.png");
+    background-position: -242px -272px;
+    display: block;
+    float: left;
+    height: 60px;
+    width: 150px
+}
+.fv-w {
+    display: inline-block;
+    padding-bottom: 10px;
+    vertical-align: top
+}
+.g-nav {
+    font-size: x-small;
+    margin-right: 7px
+}
+.fv-tw input {
+    border: 1px solid #ccc;
+    margin: 0;
+    vertical-align: top
+}
+.rfl {
+    float: left
+}
+.ptic {
+    background-position: 0 -55px;
+    height: 12px;
+    margin: 51px 0 0 -20px;
+    width: 12px
+}
+.pg-i,
+.rbbh,
+.tip,
+.tic,
+.lg,
+.ptic {
+    background: url("class=" pg-i pg-pw "class=" pg-i pg-pw "class=" pg-i pg-pw "class=" pg-i pg-pw "") no-repeat scroll 0 0 transparent;
+    display: inline-block
+}
+.tip {
+    background-position: -13px -55px;
+    height: 25px;
+    left: -14px;
+    position: absolute;
+    top: 7px;
+    width: 18px
+}
+.rcl {
+    clear: both
+}
+b,
+strong {
+    font-weight: bold
+}
+.pg-pw {
+    background-position: -18px -39px;
+    height: 10px;
+    width: 35px
+}
+.pg-tw {
+    border: 1px solid #DDD;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 4px 4px 1px #EEE;
+    -moz-box-shadow: 4px 4px 1px #eee;
+    box-shadow: 4px 4px 1px #EEE;
+    width: 300px;
+    position: absolute;
+    background: white
+}
+.pwd-bar {
+    display: block;
+    background: none repeat scroll 0 0 #c9c9c9;
+    border: 0 none;
+    border-radius: 3px;
+    height: 9px;
+    width: 90px;
+    margin-top: 7px
+}
+.pwd-week-bar {
+    display: block;
+    background-color: RGB(240, 137, 0);
+    border: 0 none;
+    border-radius: 3px;
+    height: 9px;
+    width: 56px
+}
+.pwd-invalid-bar {
+    display: block;
+    background-color: RGB(217, 32, 49);
+    border: 0 none;
+    border-radius: 3px;
+    height: 9px;
+    width: 34px
+}
+.pwd-medium-bar {
+    display: block;
+    background-color: RGB(250, 231, 54);
+    border: 0 none;
+    border-radius: 3px;
+    height: 9px;
+    width: 77px
+}
+.pwd-strong-bar {
+    display: block;
+    background-color: RGB(136, 196, 63);
+    border: 0 none;
+    border-radius: 3px;
+    height: 9px;
+    width: 90px
+}
+.pass_wrp {
+    position: relative
+}
+.re-dt {
+    color: #333;
+    display: none;
+    float: left;
+    margin: 36px 0 0 15px
+}
+.pg-et {
+    background-position: 0 -327px;
+    cursor: pointer;
+    height: 323px;
+    width: 100%;
+    margin: 15px 0 0 0
+}
+.pg-pin {
+    height: 13px;
+    width: 31px;
+    background-position: -0 -661px
+}
+.pg-pwn {
+    background-position: -30px -660px;
+    width: 56px;
+    height: 13px
+}
+.pg-pmn {
+    background-position: -86px -660px;
+    width: 77px;
+    height: 13px
+}
+.pg-psn {
+    background-position: -165px -660px;
+    width: 89px;
+    height: 13px
+}
+.pg-i,
+.rbbh,
+.tip,
+.tic,
+.lg,
+.ptic {
+    background-image: url(https://secureir.ebaystatic.com/pictures/aw/pics/register/sprregprog_ds3.png);
+    display: inline-block
+}
+.re-p9 li {
+    font-size: 12px;
+    list-style-position: outside
+}
+.re-pn {
+    background: none repeat scroll 0 0 #c9c9c9;
+    border: 0 none;
+    border-radius: 3px 3px 3px 3px;
+    height: 9px;
+    width: 90px;
+    margin: 1px 0 0 0
+}
+.re-p9 {
+    color: #666;
+    font-size: 13pt;
+    line-height: 19px;
+    padding: 15px 5px 15px 20px
+}
+.tic {
+    background-position: 0 -55px;
+    height: 12px;
+    margin: 28px 0 0 -2px;
+    width: 12px;
+    position: absolute
+}
+#mobPwdTip {
+    display: none
+}
+.footer-legal {
+    display: none;
+    margin: 25px;
+    text-align: center;
+    color: #666;
+    font-size: .625em
+}
+@media screen and (min-width: 480px) {
+    .ebaylogo {
+        display: none
+    }
+    .content input[type="text"] {
+        width: 35%
+    }
+    .footer-legal {
+        display: block
+    }
+    .pwd-st-m {
+        padding-left: 12px;
+        padding-top: 33px
+    }
+}
+@media screen and (max-width: 480px) {
+    html body {
+        font-size: 13px
+    }
+    h1 {
+        padding-top: 10px;
+        clear: both
+    }
+    h3 {
+        font-size: 1.05em
+    }
+    li {
+        font-size: 15px
+    }
+    .wrapper {
+        margin: 20px
+    }
+    .sm-co p.sm-md {
+        font-size: 15px
+    }
+    .mstm {
+        margin-left: 10px;
+        padding-top: 7px
+    }
+    .ebaylogo {
+        display: none
+    }
+    .content {
+        max-width: 480px;
+        margin: 20px 0;
+        padding: 15px 15px 20px;
+        font-size: 15px
+    }
+    .pwd-st-m {
+        padding-left: 12px
+    }
+    .content input[type="password"] {
+        width: 92%
+    }
+    p.subheader,
+    ul {
+        font-size: 1em;
+        padding-left: 20px
+    }
+    button {
+        margin-bottom: 10px;
+        width: 100%
+    }
+    #mobfooter {
+        display: block
+    }
+    .footer-legal {
+        display: block;
+        font-size: .8em
+    }
+    #mob-pwd-strng {
+        display: block
+    }
+    #web-pwd-strng {
+        display: none
+    }
+    #toolTipdiv {
+        display: none;
+        visibility: hidden
+    }
+    .uinfo p {
+        overflow-wrap: break-word
+    }
+    #mobPwdTip {
+        display: block
+    }
+}
+ul li {
+    list-style-position: outside;
+    padding-bottom: 3px
+}
+#ocs-mob-link {
+    display: none
+}
+#reg-ocs-mob-link {
+    display: none
+}
+#alternatesOptions {
+    display: inline-block;
+    padding-left: 15px
+}
+#alternatesOptions li {
+    padding-left: 10px;
+    padding-top: 5px
+}
+#ocs-web-link {
+    margin-left: 25px
+}
+#mw-hdr {
+    display: none
+}
+@media screen and (max-width: 480px) {
+    #ocs-mob-link {
+        display: block
+    }
+    #ocs-web-link {
+        display: none
+    }
+    #ebaylogo {
+        display: none
+    }
+    #reg-ocs-mob-link {
+        display: block
+    }
+    #reg-ocs-web-link {
+        display: none
+    }
+    #alternatesOptions {
+        display: inline-block;
+        padding-left: 15px
+    }
+    #alternatesOptions li {
+        padding-left: 10px;
+        padding-top: 15px
+    }
+    #mw-hdr {
+        display: block
+    }
+    #tbdHdr {
+        width: 100%;
+        position: relative
+    }
+    .cl.lgoCl {
+        height: 26px;
+        width: 65px;
+        padding: 8px 0 9px
+    }
+    #gh-mlogo {
+        height: 26px;
+        width: 65px;
+        display: inline-block;
+        white-space: nowrap;
+        text-indent: -9999px;
+        overflow: hidden;
+        position: relative;
+        left: 0;
+        top: 1px;
+        background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM0IiBoZWlnaHQ9IjU0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KIDxnPg0KICAgPHBhdGggZD0ibTI2LjkxLDI1LjE1Yy0wLjI2LC02IC01LC04LjYgLTkuNiwtOC42Yy01LDAgLTkuMywyLjYgLTEwLDguNmwyMCwwbDAsMGwwLDBsLTAuNCwwem0tMjAsNC40YzAuNCw2IDQuNSwxMCAxMC40LDkuN2M0LDAgNy41LC0xLjYgOC43LC01LjJsNywwYy0xLjMsNy4yIC04LjksOS42IC0xNS41LDkuNmMtMTIsMCAtMTcuMiwtNi42IC0xNy4yLC0xNS40YzAsLTkuNyA1LjUsLTE2IDE3LjMsLTE2YzkuNCwwIDE2LjMsNSAxNi4zLDE1LjdsMCwxLjhsLTI3LDBsMCwwIiBmaWxsPSIjRTQzMTM3IiAvPg0KICAgPHBhdGggZD0ibTUxLDM5LjA1YzYsMCAxMC40LC00LjUgMTAuNCwtMTEuMmMwLC02LjcgLTQuMiwtMTEgLTEwLjQsLTExLjJjLTYsMCAtMTEsNC41IC0xMC41LDExLjJjMCw3IDQsMTEgMTEsMTEuMmwtMC41LDB6bS0xNywtMzguN2w2LjcsMGwwLDE2LjhjMywtNCA4LC01IDEyLjIsLTVjNywwIDE2LDUgMTUuNywxNS45YzAsOSAtNi42LDE1LjcgLTE1LjgsMTUuN2MtNSwwIC05LC0yIC0xMi4yLC01LjJjMCwxLjQgLTAuMSwyLjggLTAuMiw0bC02LjYsMCIgZmlsbD0iIzAwNjNEMSIgLz4NCiAgIDxwYXRoIGQ9Im04NC41LDI4Ljc1Yy02LDAgLTEwLDEgLTkuOCw1LjNjMCwzIDIsNSA3LjMsNS40YzcsMCAxMSwtNCAxMSwtMTBsMCwtMC43Yy0yLDAgMCwwIC04LDBsLTAuNSwwem0xNSw4LjNjMCwwIDAsNCAwLjIsNS42bC02LjIsMGMwLDAgMCwwIC0wLjIsLTQuMmMtMyw0IC03LDUgLTEzLDUuM2MtOCwwIC0xMywtNCAtMTIuNiwtOS40YzAsLTcgNiwtMTAgMTYuNCwtMTBjMywwIDAsMCA4LjcsMGwwLC0xYzAsLTUgLTMsLTcgLTguNSwtNi44Yy00LDAgLTcsMiAtNy4zLDQuNWwtNywwYzEsLTcgOCwtOSAxNSwtOWM4LDAgMTUsMyAxNC42LDExIiBmaWxsPSIjRjRBRTAxIiAvPg0KICAgPHBhdGggZD0ibTEzMy41LDEzLjI1bC0yMC42LDQwLjVsLTcuNSwwbDYsLTExLjNsLTE1LjUsLTI5LjNsNy44LDBsMTEuNCwyM2wxMS40LC0yMyIgZmlsbD0iIzg1QjcxNiIgLz4NCiA8L2c+DQo8L3N2Zz4=) no-repeat 0 0;
+        background-size: 65px 26px
+    }
+    .headerLogo {
+        width: 77px
+    }
+    #mw-hdr {
+        padding: 0 10px 0 9px;
+        border-bottom: 1px solid #DDD;
+        background-color: #fff
+    }
+    #wrapper {
+        margin: 0 20px 20px
+    }
+    #inflowMobilecontainer {
+        position: absolute;
+        right: 20px;
+        top: 10px
+    }
+    .pageContent {
+        margin: 5px 0
+    }
+}
+@media screen and (max-width: 767px) and (min-width: 481px) {
+    #inflowMobilecontainer {
+        position: absolute;
+        right: 20px;
+        top: 55px
+    }
+}
+}

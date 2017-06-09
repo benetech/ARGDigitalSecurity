@@ -1,0 +1,22 @@
+#module-management .modules-list {
+  .panel a#unlinkModule {
+    float: right;
+  }
+
+  .panel .panel-footer > span {
+    line-height: 2.5em;
+  }
+  
+  div.panel-heading {
+  	word-wrap: break-word;
+  }
+
+  > div {
+    padding-left: 0px;
+    padding-right: 7px;
+    min-height: 315px;
+  }
+  .popover-content {
+   word-break: break-word;
+  }
+}

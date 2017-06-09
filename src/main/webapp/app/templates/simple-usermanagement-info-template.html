@@ -1,0 +1,19 @@
+<!-- Author Daniela Depablos User management to display in the add user management form -->
+<ul>
+	<% _.each(userAccountManagements,function(userAccountManagement) {%>
+	<li  class="list-group-item add-user-list-item" data-id="<%= userAccountManagement.id %>">
+		
+		<div class="row">
+			<div class="col-md-4 col-xs-6" style="padding-right:10px;">
+			 	<%= userAccountManagement.lastName %>,&nbsp;<%= userAccountManagement.firstName %>
+			 	&nbsp;<%= userAccountManagement.email %>&nbsp;&nbsp;<%= userAccountManagement.phone %>
+			</div>
+			
+			<div id="editUserMng" data-id="<%= userAccountManagement.id %>" class="col-md-1 col-xs-1 pull-right">
+			  <a><i class="glyphicon glyphicon-pencil"></i></a>
+			</div>
+		</div>
+	</li>
+	
+	<% }) %>
+</ul>

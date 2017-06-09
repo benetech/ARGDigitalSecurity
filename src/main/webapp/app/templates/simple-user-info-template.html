@@ -1,0 +1,29 @@
+<!-- Author Andres Oviedo Simple user info to display in collection -->
+<ul>
+<% _.each(userInfos,function(userInfo) {%>
+
+<li  class="list-group-item add-user-list-item" data-id="<%= userInfo.id %>">
+	
+	<div class="row">
+		<div class="col-md-4 col-xs-6" style="padding-right:10px;">
+			<%=(userInfo.lastName.length >39?userInfo.lastName.substr(0,20):userInfo.lastName)%>,&nbsp;<%=(userInfo.firstName.length >39)?userInfo.firstName.substr(0,20):userInfo.firstName%>&nbsp;		 	
+		 	<%= userInfo.email %>&nbsp;&nbsp;<%= userInfo.phone %>
+		</div>
+		<div id="removeUser" data-id="<%= userInfo.id %>" class="col-md-1 col-xs-1 pull-right">
+		  <a><i class="glyphicon glyphicon-remove"></i></a>
+		</div>
+		<div id="editUser" data-id="<%= userInfo.id %>" class="col-md-1 col-xs-1 pull-right">
+		  <a><i class="glyphicon glyphicon-pencil"></i></a>
+		</div>
+		<% if(!userInfo.linkedToTeam) {%>
+			<div id="addUserToTeam" data-id="<%= userInfo.id %>" class="col-md-1 col-xs-1 pull-right">
+		  		<a><i class="glyphicon glyphicon-ok"></i></a>
+			</div>
+		<%}%>
+		
+	</div>
+	
+</li>
+
+<% }) %>
+</ul>

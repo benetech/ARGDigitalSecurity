@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,mBAAoB;EAClB,aAAa,EAAC,eAAe;;;AAE/B,iDAAkD;EAC9C,IAAI,EAAE,OAAO",
+"sources": ["../../scss/views/team-status-graphic.scss"],
+"names": [],
+"file": "team-status-graphic.css"
+}

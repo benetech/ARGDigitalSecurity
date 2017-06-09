@@ -1,0 +1,12 @@
+#module-management .modules-list .panel a#unlinkModule {
+  float: right;
+}
+#module-management .modules-list .panel .panel-footer > span {
+  line-height: 2.5em;
+}
+#module-management .modules-list > div {
+  padding-left: 0px;
+  padding-right: 7px;
+}
+
+/*# sourceMappingURL=module-management.css.map */

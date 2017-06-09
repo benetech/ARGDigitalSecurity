@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<module value="">
+  <config value="">
+    <name>Ebay Phish</name>
+    <description>Ebay rest password</description>
+    <model>one-time</model>
+    <duration>7</duration>
+    <timeunit>days</timeunit>
+    <date>14/12/2016</date>
+  </config>
+  <steps value="">
+    <step value="">
+      <sequenceid>0</sequenceid>
+      <method value="">
+        <name>SendMail</name>
+        <description>Send email with invalid information as an attack</description>
+        <parameters value="">
+          <to>enrolled users</to>
+          <from>Ebay Support &lt;notifications@accountmail.co&gt;</from>
+          <subject>Ebay requests you change your password</subject>
+          <body><![CDATA[
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"> <html><body> <img role="presentation" width="250" height="200" style="position: absolute; top: -47px; left: 0;" alt="" src="http://arg-qa.benetech.org/catalog/www.ebay.com/ebay.png"><h1 style="margin-top: 4%;">Reset your Password</h1> <p>Please visit the following link and reset your password</p> <a href="final_web_clone_url">Enter here to reset your password</a><div><table style="margin-top: 4%;"><tbody><tr valign="top"> <td>Copyright &copy; 1995-2016 eBay Inc. All Rights Reserved. <a href="http://pages.ebay.com/uy/en-us/help/policies/user-agreement.html">User Agreement</a>, <a href="http://pages.ebay.com/uy/en-us/help/policies/privacy-policy.html">Privacy</a>, <a href="http://pages.ebay.com/uy/en-us/help/account/cookies-web-beacons.html">Cookies</a> and <a href="http://cgi6.ebay.com/ws/eBayISAPI.dll?AdChoiceLandingPage&amp;partner=0">AdChoice</a> </td> <td nowrap align="center"></td> </tr></tbody></table></div> </body></html> 
+]]></body>
+          <source>https://arg-qa.benetech.org/catalog/www.ebay.com/resetPassword.html</source>
+        </parameters>
+      </method>
+      <conditions value="">
+        <c value="">
+          <condition>emailDelivered</condition>
+          <timer>1 days</timer>
+	  <retries>1</retries>
+          <true>return an ID for step 1</true>
+          <false>createFlag</false>
+        </c>
+      </conditions>
+    </step>
+    <step value="">
+      <sequenceid>1</sequenceid>
+      <method value="">
+        <name>TrackEmail</name>
+        <description>User oppened attack email</description>
+        <parameters value="">
+          <to>enrolledUsers</to>
+        </parameters>
+      </method>
+      <conditions value="">
+        <c value="">
+          <condition>emailOppened</condition>
+          <timer>2 days</timer>
+          <retries>1</retries>
+          <true>status red</true>
+          <false>n/a</false>
+        </c>
+        <c value="">
+          <condition>retry</condition>
+          <timer>3 days</timer>
+          <retries>1</retries>
+          <true>sent again</true>
+          <false>retry failed</false>
+        </c>
+      </conditions>
+    </step>
+    <step value="">
+      <sequenceid>2</sequenceid>
+      <method value="">
+        <name>TrackWebPage</name>
+        <description>User entered a clone web page</description>
+        <parameters value="">
+          <url>referalUrl</url>
+        </parameters>
+      </method>    
+      <conditions value="">
+        <c value="">
+          <condition>userVisitedUrl</condition>
+          <timer>4 days</timer>
+          <retries>0</retries>
+          <true>status red</true>
+          <false>n/a</false>
+        </c>
+        <c value="">
+          <condition>attemptRetry</condition>
+          <timer>4 days</timer>
+          <retries>1</retries>
+          <true>sent again</true>
+          <false>retry failed</false>
+        </c>
+      </conditions>
+    </step>
+    <step value="">
+      <sequenceid>3</sequenceid>
+      <method value="">
+        <name>FormWebHook</name>
+        <description>User submitted information to 'unknown' internet source</description>
+        <parameters value="">
+          <url>resetPasswordUrl</url>
+        </parameters>
+      </method>    
+      <conditions value="">
+        <c value="">
+          <condition>submittedData</condition>
+          <timer>5 days</timer>
+          <retries>1</retries>
+          <true>status red</true>
+          <false>n/a</false>
+        </c>
+        <c value="">
+          <condition>attemptRetry</condition>
+          <timer>6 days</timer>
+          <retries>1</retries>
+          <true>sent again</true>
+          <false>retry failed</false>
+        </c>
+      </conditions>
+    </step>
+  </steps>
+</module>

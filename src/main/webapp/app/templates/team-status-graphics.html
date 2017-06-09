@@ -1,0 +1,122 @@
+<div class="row">
+	<br><br><br>
+	<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 dashboard-column pull-left">					
+				<div>
+							<h4><%= polyglot.t('titleUserScores') %></h4>
+							<table style="width:100%">
+								<tr>
+							    <th><%= polyglot.t('titleUserFirstname') %></th>
+							    <th><%= polyglot.t('titleUserLastName') %></th> 
+							    <th><%= polyglot.t('titleUserScoreItem') %></th>
+							  	</tr>
+							  <%_.each(usersInfo,function(userInfo) {%>
+							     <tr>
+							     	
+							    	<td><%= (userInfo.firstName.length >39)?userInfo.firstName.substr(0,20):userInfo.firstName %></td>
+							    	<td><%= (userInfo.lastName.length >39?userInfo.lastName.substr(0,20):userInfo.lastName)%></td> 
+							    	<td><%= userInfo.score %></td	>
+							  	</tr> 
+						    <% }) %>
+						
+						</table>
+					</div>
+			</div>
+					
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 dashboard-column pull-right" >					
+						<div>
+							<h4><%= polyglot.t('titleAverageScore') %></h4>
+						</div>
+						<div >
+							<h4><%=score%></h4>
+						</div>
+		
+					</div>	
+					<br><br><br>
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 dashboard-column pull-right">
+						<div>
+							<h4><%=polyglot.t('titleStages')%></h4>
+						</div>
+						<div id="stagesCompleted" class="ct-chart ct-perfect-fourth">
+							
+						</div>
+					</div>
+					
+				</div>
+				<br><br><br><br>
+			<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 dashboard-column pull-left" style="padding-left: 50px!important;">					
+						<div>
+							<h4><%=polyglot.t('titleCommonMistakes')%></h4>
+						</div>
+						<div>
+							<table style="width:100%">
+							  <tr>
+							    <th><%=polyglot.t('titleCommonMistakesDescription')%></th>
+							    <th><%=polyglot.t('titleCommonMistakesTotal')%></th>
+							  </tr>
+							  <%_.each(commonErrors,function(commonError) {%>
+							     <tr>
+							    	<td><%= commonError.description %></td>
+							    	<td><%= commonError.total %></td> 	
+							  	</tr> 
+						       <% }) %>
+							    
+							</table>
+						</div>
+		
+					</div>
+					
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 dashboard-column pull-left">					
+						<div>
+							<h4><%=polyglot.t('performanceTitle')%></h4>
+						</div>
+						<div id="performanceOverTime">
+							<table style="width:100%">
+							  <tr class="border_bottom"> 
+							    <th><%=polyglot.t('titleScoreTableUser')%></th>
+							    <th><%=polyglot.t('titleScoreTableModule')%></th>
+							  </tr>
+							  <%_.each(userStepsScore,function(userStepScore) {%>
+							     <tr class="border_bottom">
+							     	
+							    	<td><%= (userStepScore.name.length >39)?userStepScore.name.substr(0,20):userStepScore.name %></td>
+							    	<td><%= userStepScore.description %></td> 	
+							  	</tr> 
+						       <% }) %>
+							    
+							</table>
+							
+						</div>
+		
+					</div>
+				</div>
+				
+<script>
+					
+					//var serie1=[<%= stagesComplement %>,<%= stagesCompleted %>];
+					
+					var serie1=[<%= stagesComplement %>,<%= stagesCompleted %>];
+					var data2 = {
+							  labels:["Failured","Completed"],
+							  						  
+							  series: serie1,
+							  colors:["#333", "#222"]
+							};
+							
+							
+	
+							
+	
+							new Chartist.Pie('#stagesCompleted', data2, {
+							  labelInterpolationFnc: function(value) {
+							  	console.log(value);
+							  	if(value =="Failured" && data2.series[0] > 0){
+							  		return value +' '+data2.series[0]+ '%';
+							  	}							  		
+							    else if(value =="Completed" && data2.series[1] > 0)
+							    	return value +' '+data2.series[1]+ '%';
+							  }
+							});
+					
+					
+					</script>

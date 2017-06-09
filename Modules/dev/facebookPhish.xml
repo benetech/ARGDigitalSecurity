@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<module value="">
+  <config value="">
+    <name>Facebook Phish</name>
+    <description>test ebay phishing</description>
+    <model>one-time</model>
+    <duration>7</duration>
+    <timeunit>days</timeunit>
+    <date>14/12/2016</date>
+  </config>
+  <steps value="">
+    <step value="">
+      <sequenceid>0</sequenceid>
+      <method value="">
+        <name>SendMail</name>
+        <description>Send email with invalid information as an attack</description>
+        <parameters value="">
+          <to>enrolled users</to>
+          <from>Facebook &lt;notifications@accounthelp.co&gt;</from>
+          <subject>New message received</subject>
+          <body><![CDATA[
+<table cellspacing="0" cellpadding="0" style="border-collapse:collapse;width:620px"> <tbody> <tr> <td style="font-size:16px;font-family:'lucida grande',tahoma,verdana,arial,sans-serif;background:#3b5998;color:#ffffff;font-weight:bold;vertical-align:baseline;letter-spacing:-0.03em;padding:5px 20px"> <a style="text-decoration:none" href="" target="_blank"><span style="background:#3b5998;color:#ffffff;font-weight:bold;font-family:'lucida grande',tahoma,verdana,arial,sans-serif;vertical-align:middle;font-size:16px;letter-spacing:-0.03em;vertical-align:baseline">facebook</span> </a> </td> </tr> </tbody> </table>  <table cellspacing="0" cellpadding="0" width="620px" style="border-collapse:collapse;width:620px" border="0"> <tbody> <tr> <td style="font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans-serif;padding:0px;background-color:#f2f2f2;border-left:none;border-right:none;border-top:none;border-bottom:none"> <table cellspacing="0" cellpadding="0" width="620px" style="border-collapse:collapse"> <tbody> <tr> <td style="font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans-serif;padding:0px;width:620px"> <table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;width:100%"> <tbody> <tr> <td style="font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans-serif;padding:20px;background-color:#fff;border-left:none;border-right:none;border-top:none;border-bottom:none"> <table cellspacing="0" cellpadding="0" style="border-collapse:collapse"> <tbody> <tr > <td valign="middle" style="font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans-serif;padding-right:15px;text-align:left"> <a href="" style="color:#3b5998;text-decoration:none" target="_blank"><img src="https://arg-qa.benetech.org/catalog/www.facebook.com/img/org.png" style="border:0"></a> </td> <td valign="middle" style="font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans-serif;width:100%;text-align:left"> <table cellspacing="0" cellpadding="0" style="border-collapse:collapse;width:100%"> <tbody> <tr> <td style="font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans-serif;padding-bottom:10px"> <table cellspacing="0" cellpadding="0" style="border-collapse:collapse;width:100%"> <tbody> <tr> <td style="font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans-serif;padding-bottom:5px"> <span style="color:#333333"> <a href="" style="color:#3b5998;text-decoration:none" target="_blank">Impact.org</a> tagged you and 16 others in a <a href="" style="color:#3b5998;text-decoration:none" target="_blank">post</a>: celebrating <a href="" style="color:#3b5998;text-decoration:none" target="_blank">Most Impactful 2016</a>. </span> </td> </tr> <tr> <td style="font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans-serif;padding-top:5px"> <span style="color:#333333">They wrote: "Congrats to these wonderful organizations, well deserved!"</span> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </td> </tr> <tr><td style="font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans-serif;padding:0px;width:620px"> <table cellspacing="0" cellpadding="0" style="border-collapse:collapse;width:100%" border="0"><tbody> <tr><td style="font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans-serif;padding:7px 20px;background-color:#f2f2f2;border-left:none;border-right:none;border-top:1px solid #ccc;border-bottom:1px solid #ccc"> <table cellspacing="0" cellpadding="0"><tbody><tr><td style="font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans-serif;padding-left:65px"> <table cellspacing="0" cellpadding="0" style="border-collapse:collapse"> <tbody> <tr><td style="border-width:1px;border-style:solid;border-color:#3b6e22 #3b6e22 #2c5115;background-color:#69a74e"> <table cellspacing="0" cellpadding="0" style="border-collapse:collapse"> <tbody><tr><td style="font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans-serif;padding:2px 6px 4px;border-top:1px solid #95bf82"> <a href="final_web_clone_url" style="color:#3b5998;text-decoration:none" target="_blank"> <span style="font-weight:bold;white-space:nowrap;color:#ffffff;font-size:14px">See Post</span></a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table> <table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;width:620px"><tbody><tr><td align="center" style="font-size:11px;font-family:'lucida grande',tahoma,verdana,arial,sans-serif;padding:10px;background-color:#fff;border-left:none;border-right:none;border-top:none;border-bottom:none;color:#999999;border:none">Facebook, Inc., Attention: Community Support, 1 Hacker Way, Menlo Park, CA 94025</td></tr></tbody></table> 
+]]></body>
+          <source>http://localhost:8080/catalog/www.facebook.com/resetPassword.html</source>
+        </parameters>
+      </method>
+      <conditions value="">
+        <c value="">
+          <condition>emailDelivered</condition>
+          <timer>1 days</timer>
+	  <retries>1</retries>
+          <true>return an ID for step 1</true>
+          <false>createFlag</false>
+        </c>
+      </conditions>
+    </step>
+    <step value="">
+      <sequenceid>1</sequenceid>
+      <method value="">
+        <name>TrackEmail</name>
+        <description>User oppened attack email</description>
+        <parameters value="">
+          <to>enrolledUsers</to>
+        </parameters>
+      </method>
+      <conditions value="">
+        <c value="">
+          <condition>emailOppened</condition>
+          <timer>2 days</timer>
+          <retries>1</retries>
+          <true>status red</true>
+          <false>n/a</false>
+        </c>
+        <c value="">
+          <condition>retry</condition>
+          <timer>3 days</timer>
+          <retries>1</retries>
+          <true>sent again</true>
+          <false>retry failed</false>
+        </c>
+      </conditions>
+    </step>
+    <step value="">
+      <sequenceid>2</sequenceid>
+      <method value="">
+        <name>TrackWebPage</name>
+        <description>User entered a clone web page</description>
+        <parameters value="">
+          <url>referalUrl</url>
+        </parameters>
+      </method>    
+      <conditions value="">
+        <c value="">
+          <condition>userVisitedUrl</condition>
+          <timer>4 days</timer>
+          <retries>0</retries>
+          <true>status red</true>
+          <false>n/a</false>
+        </c>
+        <c value="">
+          <condition>attemptRetry</condition>
+          <timer>4 days</timer>
+          <retries>1</retries>
+          <true>sent again</true>
+          <false>retry failed</false>
+        </c>
+      </conditions>
+    </step>
+    <step value="">
+      <sequenceid>3</sequenceid>
+      <method value="">
+        <name>FormWebHook</name>
+        <description>User submitted information to 'unknown' internet source</description>
+        <parameters value="">
+          <url>resetPasswordUrl</url>
+        </parameters>
+      </method>    
+      <conditions value="">
+        <c value="">
+          <condition>submittedData</condition>
+          <timer>5 days</timer>
+          <retries>1</retries>
+          <true>status red</true>
+          <false>n/a</false>
+        </c>
+        <c value="">
+          <condition>attemptRetry</condition>
+          <timer>6 days</timer>
+          <retries>1</retries>
+          <true>sent again</true>
+          <false>retry failed</false>
+        </c>
+      </conditions>
+    </step>
+  </steps>
+</module>

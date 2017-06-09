@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<module value="">
+  <config value="">
+    <name>Dropbox Phish</name>
+    <description>test ebay phishing</description>
+    <model>one-time</model>
+    <duration>7</duration>
+    <timeunit>days</timeunit>
+    <date>14/12/2016</date>
+  </config>
+  <steps value="">
+    <step value="">
+      <sequenceid>0</sequenceid>
+      <method value="">
+        <name>SendMail</name>
+        <description>Send email with invalid information as an attack</description>
+        <parameters value="">
+          <to>enrolled users</to>
+          <from>Dropbox &lt;notifications@accounthelp.co&gt;</from>
+          <subject>A new file has been shared with you</subject>
+          <body><![CDATA[
+<table cellpadding="0" cellspacing="0" style="border-radius:4px;border:1px #dceaf5 solid" border="0" align="center">  <tbody> <tr><td colspan="3" height="6"></td></tr> <tr style="line-height:0px"><td width="100%" style="font-size:0px" align="center" height="1"><img width="40px" style="max-height:73px;width:40px" alt="" src="https://arg-qa.benetech.org/catalog/www.dropbox.com/dropboxEMAIL.png" class="CToWUd"></td></tr> <tr> <td> <table cellpadding="0" cellspacing="0" style="line-height:25px" border="0" align="center"> <tbody> <tr> <td colspan="3" height="30"></td> </tr> <tr> <td width="36"></td> <td width="454" align="left" style="color:#444444;border-collapse:collapse;font-size:11pt;font-family:proxima_nova,'Open Sans','Lucida Grande','Segoe UI',Arial,Verdana,'Lucida Sans Unicode',Tahoma,'Sans Serif';max-width:454px" valign="top">A new <span class="il">Dropbox</span> file has been shared with this email at <b><span class="aBn" data-term="goog_2061677009" tabindex="0"><span class="aQJ">03:06 PM GMT-07:00</span></span></b> from <b>accounts@dhl.com</b>.<br><br>The author provided the following comment:<br><br><i>"Our account review process has noticed a mistake in invoice #29145 paid on Dec. 1, 2016. Please review this document for full detials and confirm the new amount. Please let us know if you have any questions"</i><br><br></td> <td width="36"></td> </tr>  <tr> <td width="36"></td> <td align="center" style="padding:0;margin:0;line-height:1px;font-size:1px;border-radius:4px;line-height:18px"><a href="final_web_clone_url" style="background-color:#007ee5;text-decoration:none;border-style:none;border:0;padding:0;margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:18px;font-weight:500;color:#ffffff;text-align:center;text-decoration:none;border-radius:4px;padding:11px 30px;border:1px solid #55acee;display:inline-block" target="_blank"> <strong>View File</strong> </a></td> <td width="36"></td> </tr>   <tr> <td width="36"></td> <td width="454" align="left" style="color:#444444;border-collapse:collapse;font-size:11pt;font-family:proxima_nova,'Open Sans','Lucida Grande','Segoe UI',Arial,Verdana,'Lucida Sans Unicode',Tahoma,'Sans Serif';max-width:454px" valign="top"><br><b>Note:</b> You may view or download the file without creating an account. <br><br>Happy Dropboxing!<br><br>P.S. <a href="https://www.dropbox.com/login" target="_blank">Make an account today</a>!</td> <td width="36"></td> </tr> <tr> <td colspan="3" height="36"></td> </tr> </tbody> </table> </td> </tr> </tbody> </table>
+]]></body>
+          <source>http://localhost:8080/catalog/www.dropbox.com/resetPassword.html</source>
+        </parameters>
+      </method>
+      <conditions value="">
+        <c value="">
+          <condition>emailDelivered</condition>
+          <timer>1 days</timer>
+	  <retries>1</retries>
+          <true>return an ID for step 1</true>
+          <false>createFlag</false>
+        </c>
+      </conditions>
+    </step>
+    <step value="">
+      <sequenceid>1</sequenceid>
+      <method value="">
+        <name>TrackEmail</name>
+        <description>User oppened attack email</description>
+        <parameters value="">
+          <to>enrolledUsers</to>
+        </parameters>
+      </method>
+      <conditions value="">
+        <c value="">
+          <condition>emailOppened</condition>
+          <timer>2 days</timer>
+          <retries>1</retries>
+          <true>status red</true>
+          <false>n/a</false>
+        </c>
+        <c value="">
+          <condition>retry</condition>
+          <timer>3 days</timer>
+          <retries>1</retries>
+          <true>sent again</true>
+          <false>retry failed</false>
+        </c>
+      </conditions>
+    </step>
+    <step value="">
+      <sequenceid>2</sequenceid>
+      <method value="">
+        <name>TrackWebPage</name>
+        <description>User entered a clone web page</description>
+        <parameters value="">
+          <url>referalUrl</url>
+        </parameters>
+      </method>    
+      <conditions value="">
+        <c value="">
+          <condition>userVisitedUrl</condition>
+          <timer>4 days</timer>
+          <retries>0</retries>
+          <true>status red</true>
+          <false>n/a</false>
+        </c>
+        <c value="">
+          <condition>attemptRetry</condition>
+          <timer>4 days</timer>
+          <retries>1</retries>
+          <true>sent again</true>
+          <false>retry failed</false>
+        </c>
+      </conditions>
+    </step>
+    <step value="">
+      <sequenceid>3</sequenceid>
+      <method value="">
+        <name>FormWebHook</name>
+        <description>User submitted information to 'unknown' internet source</description>
+        <parameters value="">
+          <url>resetPasswordUrl</url>
+        </parameters>
+      </method>    
+      <conditions value="">
+        <c value="">
+          <condition>submittedData</condition>
+          <timer>5 days</timer>
+          <retries>1</retries>
+          <true>status red</true>
+          <false>n/a</false>
+        </c>
+        <c value="">
+          <condition>attemptRetry</condition>
+          <timer>6 days</timer>
+          <retries>1</retries>
+          <true>sent again</true>
+          <false>retry failed</false>
+        </c>
+      </conditions>
+    </step>
+  </steps>
+</module>

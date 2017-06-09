@@ -1,0 +1,26 @@
+/**
+ * 	Author Daniela Depablos
+ *  style color for the steps icon
+ * 
+ */
+.user-status .green {
+  color: #00ff00;
+}
+.user-status .yellow {
+  color: #ffff00;
+}
+.user-status .red {
+  color: #ff3300;
+}
+.user-status .user-header-title {
+  color: black;
+  font-size: 18px;
+  text-align: justify;
+  width: 100%;
+  text-indent: .5cm;
+}
+.user-status .popover-content {
+  word-break: break-word;
+}
+
+/*# sourceMappingURL=userStatus.css.map */

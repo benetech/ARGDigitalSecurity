@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACE,sDAAsB;EACpB,KAAK,EAAE,KAAK;;AAGd,4DAA4B;EAC1B,WAAW,EAAE,KAAK;;AAGpB,kDAAkB;EACjB,SAAS,EAAE,UAAU;;AAGtB,sCAAM;EACJ,YAAY,EAAE,GAAG;EACjB,aAAa,EAAE,GAAG;EAClB,UAAU,EAAE,KAAK;;AAEnB,iDAAiB;EAChB,UAAU,EAAE,UAAU",
+"sources": ["../../scss/views/module-management.scss"],
+"names": [],
+"file": "module-management.css"
+}

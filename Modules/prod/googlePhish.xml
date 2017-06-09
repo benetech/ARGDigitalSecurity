@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<module value="">
+  <config value="">
+    <name>Google Phish</name>
+    <description>Google Password reset</description>
+    <model>one-time</model>
+    <duration>7</duration>
+    <timeunit>days</timeunit>
+    <date>14/12/2016</date>
+  </config>
+  <steps value="">
+    <step value="">
+      <sequenceid>0</sequenceid>
+      <method value="">
+        <name>SendMail</name>
+        <description>Send email with invalid information as an attack</description>
+        <parameters value="">
+          <to>enrolled users</to>
+          <from>Google Support &lt;notifications@accountmail.co&gt;</from>
+          <subject>Suspicious account activity</subject>
+          <body><![CDATA[
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"> <html><body><div bgcolor="#e1e8ed" style="margin: 0; padding: 0;"> <table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#e1e8ed" style="background-color: #e1e8ed; line-height: 1px; font-size: 1px; margin: 0; padding: 0;"> <tbody> <tr> <td align="center" style="line-height: 1px; font-size: 1px; margin: 0; padding: 0;">    <table align="center" width="500" style="width: 500px; background-color: #ffffff; line-height: 1px; font-size: 1px; margin: 0; padding: 0;" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0"> <tbody> <tr> <td height="15" style="height: 15px; line-height: 1px; font-size: 1px; margin: 0; padding: 0;"> &nbsp; </td> </tr> <tr> <td style="line-height: 1px; font-size: 1px; margin: 0; padding: 0;"> <table cellpadding="0" cellspacing="0" border="0" width="100%" style="width: 100%; line-height: 1px; font-size: 1px; margin: 0; padding: 0;" align="left"> <tbody> <tr> <td align="center" width="28" style="line-height: 1px; font-size: 1px; margin: 0; padding: 0;"> <a href="" style="text-decoration: none; margin: 0; padding: 0; border: 0 none;" target="_blank"><img align="center" width="28" src="https://arg-qa.benetech.org/catalog/www.google.com/google.png" style="width: 100px; display: block; outline: none; margin: 0; padding: 0; border: none;"></a> </td> </tr> </tbody> </table> </td> </tr> <tr> <td height="14" style="height: 14px; line-height: 1px; font-size: 1px; margin: 0; padding: 0;"> &nbsp; </td> </tr> </tbody> </table>     <table align="center" width="500" style="width: 500px; background-color: #ffffff; line-height: 1px; font-size: 1px; margin: 0; padding: 0;" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff"> <tbody> <tr> <td colspan="2" height="1" style="display: block; height: 1px; padding: 0; margin: 0; background-color: #e1e8ed; line-height: 1px; font-size: 1px;" bgcolor="#e1e8ed"></td> </tr> </tbody> </table>     <table align="center" width="500" style="width: 500px; background-color: #ffffff; line-height: 1px; font-size: 1px; margin: 0; padding: 0;" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff"> <tbody> <tr> <td width="50" style="width: 50px; line-height: 1px; font-size: 1px; margin: 0; padding: 0;"></td> <td align="center" style="line-height: 1px; font-size: 1px; margin: 0; padding: 0;"> <table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" style="line-height: 1px; font-size: 1px; margin: 0; padding: 0;"> <tbody> <tr> <td height="30" style="height: 30px; line-height: 1px; font-size: 1px; margin: 0; padding: 0;"></td> </tr> <tr> <td align="left" style="line-height: 1px; font-size: 1px; margin: 0; padding: 0;"> <span style="font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif; color: #66757f; font-size: 26px; font-weight: 300; line-height: 100%; text-align: left; margin: 0px; padding: 0px;">Help us keep your account safe.</span> </td> </tr> <tr> <td height="12" style="height: 12px; line-height: 1px; font-size: 1px; margin: 0; padding: 0;"></td> </tr> <tr> <td align="left" style="padding: 0px; margin: 0px; font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif; color: #66757f; font-size: 16px; font-weight: 300; line-height: 23px; text-align: left;"> Your account has been locked due to suspicious login activity. Please click the button below in order to confirm access to your account.</td> </tr> <tr> <td height="22" style="height: 22px; line-height: 1px; font-size: 1px; margin: 0; padding: 0;"></td> </tr>  <tr> <td align="center" style="line-height: 1px; font-size: 1px; margin: 0; padding: 0;"> <table border="0" cellspacing="0" cellpadding="0" style="line-height: 1px; font-size: 1px; margin: 0; padding: 0;"> <tbody> <tr> <td style="line-height: 1px; font-size: 1px; margin: 0; padding: 0;">  <table width="100%" border="0" cellspacing="0" cellpadding="0" style="line-height: 1px; font-size: 1px; margin: 0; padding: 0;"> <tbody> <tr> <td style="line-height: 1px; font-size: 1px; margin: 0; padding: 0;"> <table border="0" cellspacing="0" cellpadding="0" style="line-height: 1px; font-size: 1px; margin: 0; padding: 0;"> <tbody> <tr> <td align="center" bgcolor="#4285f4" style="padding: 0; font-size: 1px; margin: 0; border-radius: 4px; line-height: 18px;"><a href="final_web_clone_url" style="font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif; font-size: 14px; line-height: 36px; font-weight: 500; border: 1px solid #55acee; color: #ffffff; margin: 0; padding: 1px 20px; text-align: center; text-decoration: none; border-radius: 3px; display: inline-block; text-transform: uppercase;" target="_blank"> Confirm now </a></td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </td> </tr>  <tr> <td height="44" style="height: 44px; line-height: 1px; font-size: 1px; margin: 0; padding: 0;"></td> </tr> </tbody> </table> </td> <td width="50" style="width: 50px; line-height: 1px; font-size: 1px; margin: 0; padding: 0;"></td> </tr> </tbody> </table>       <table align="center" width="500" style="width: 500px; background-color: #ffffff; line-height: 1px; font-size: 1px; margin: 0; padding: 0;" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff"> <tbody> <tr> <td height="1" style="display: block; height: 1px; padding: 0; margin: 0; background-color: #e1e8ed; line-height: 1px; font-size: 1px;" bgcolor="#e1e8ed"></td> </tr> <tr> <td height="20" style="height: 20; line-height: 1px; font-size: 1px; margin: 0; padding: 0;"></td> </tr> <tr> <td align="center" style="line-height: 1px; font-size: 1px; margin: 0; padding: 0;"> <span style="font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif; color: #8899a6; font-size: 12px; font-weight: normal; line-height: 12px; margin: 0px; padding: 0px;"> <a href="final_web_clone_url" style="text-decoration: none; font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif; color: #3366cc; font-size: 12px; line-height: 12px; margin: 0px; padding: 0px; border: 0 none;" target="_blank">Settings</a> | <a href="https://support.google.com/?hl=en" style="text-decoration: none; font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif; color: #3366cc; font-size: 12px; line-height: 12px; margin: 0px; padding: 0px; border: 0 none;" target="_blank">Help</a> | <a href="final_web_clone_url" style="text-decoration: none; font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif; color: #3366cc; font-size: 12px; line-height: 12px; margin: 0px; padding: 0px; border: 0 none;" target="_blank">Not my account</a> </span> </td> </tr> <tr> <td height="10" style="height: 10px; line-height: 1px; font-size: 1px; margin: 0; padding: 0;"></td> </tr> <tr> <td align="center" style="line-height: 1px; font-size: 1px; margin: 0; padding: 0;"> <span> <a style="text-decoration: none; font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif; color: #8899a6; font-size: 12px; font-weight: normal; line-height: 12px; margin: 0px; padding: 0px; border: 0 none;">Google Inc., 1600 Amphitheatre Pkwy, Mountain View, CA 94043 USA</a> </span> </td> </tr> <tr> <td height="26" style="height: 26; line-height: 1px; font-size: 1px; margin: 0; padding: 0;"></td> </tr> </tbody> </table>     </td> </tr> </tbody> </table> </div></body></html> 
+]]></body>
+          <source>https://arg-qa.benetech.org/catalog/www.google.com/resetPassword.html</source>
+        </parameters>
+      </method>
+      <conditions value="">
+        <c value="">
+          <condition>emailDelivered</condition>
+          <timer>1 days</timer>
+	  <retries>1</retries>
+          <true>return an ID for step 1</true>
+          <false>createFlag</false>
+        </c>
+      </conditions>
+    </step>
+    <step value="">
+      <sequenceid>1</sequenceid>
+      <method value="">
+        <name>TrackEmail</name>
+        <description>User oppened attack email</description>
+        <parameters value="">
+          <to>enrolledUsers</to>
+        </parameters>
+      </method>
+      <conditions value="">
+        <c value="">
+          <condition>emailOppened</condition>
+          <timer>2 days</timer>
+          <retries>1</retries>
+          <true>status red</true>
+          <false>n/a</false>
+        </c>
+        <c value="">
+          <condition>retry</condition>
+          <timer>3 days</timer>
+          <retries>1</retries>
+          <true>sent again</true>
+          <false>retry failed</false>
+        </c>
+      </conditions>
+    </step>
+    <step value="">
+      <sequenceid>2</sequenceid>
+      <method value="">
+        <name>TrackWebPage</name>
+        <description>User entered a clone web page</description>
+        <parameters value="">
+          <url>referalUrl</url>
+        </parameters>
+      </method>    
+      <conditions value="">
+        <c value="">
+          <condition>userVisitedUrl</condition>
+          <timer>4 days</timer>
+          <retries>0</retries>
+          <true>status red</true>
+          <false>n/a</false>
+        </c>
+        <c value="">
+          <condition>attemptRetry</condition>
+          <timer>4 days</timer>
+          <retries>1</retries>
+          <true>sent again</true>
+          <false>retry failed</false>
+        </c>
+      </conditions>
+    </step>
+    <step value="">
+      <sequenceid>3</sequenceid>
+      <method value="">
+        <name>FormWebHook</name>
+        <description>User submitted information to 'unknown' internet source</description>
+        <parameters value="">
+          <url>resetPasswordUrl</url>
+        </parameters>
+      </method>    
+      <conditions value="">
+        <c value="">
+          <condition>submittedData</condition>
+          <timer>5 days</timer>
+          <retries>1</retries>
+          <true>status red</true>
+          <false>n/a</false>
+        </c>
+        <c value="">
+          <condition>attemptRetry</condition>
+          <timer>6 days</timer>
+          <retries>1</retries>
+          <true>sent again</true>
+          <false>retry failed</false>
+        </c>
+      </conditions>
+    </step>
+  </steps>
+</module>

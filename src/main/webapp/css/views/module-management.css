@@ -1,0 +1,19 @@
+#module-management .modules-list .panel a#unlinkModule {
+  float: right;
+}
+#module-management .modules-list .panel .panel-footer > span {
+  line-height: 2.5em;
+}
+#module-management .modules-list div.panel-heading {
+  word-wrap: break-word;
+}
+#module-management .modules-list > div {
+  padding-left: 0px;
+  padding-right: 7px;
+  min-height: 315px;
+}
+#module-management .modules-list .popover-content {
+  word-break: break-word;
+}
+
+/*# sourceMappingURL=module-management.css.map */

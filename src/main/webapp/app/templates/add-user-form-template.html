@@ -1,0 +1,44 @@
+	<div class="row">	
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="panel panel-default">
+						<div class="panel-body">
+						<h4><%= polyglot.t( userInfo.get('formTitle')) %></h4>
+						<form id="addUser" method="post">
+						  <div class="form-group">
+						    <label for="firstName"><%= polyglot.t('fieldWorkerName') %></label>
+						    <input type="text" maxlength="40" class="form-control" id="firstName" placeholder="<%= polyglot.t('fieldWorkerNamePlaceHolder') %>" value="<%= userInfo.get('firstName') %>" required
+						    data-fv-notempty-message="<%= polyglot.t('nameRequired') %>" maxlength="40">
+						    <small id="nameRequired" hidden="hidden" class="form-text text-muted"><%= polyglot.t('nameRequired') %></small>
+						    <small id="nameInvalid" hidden="hidden" class="form-text text-muted"><%= polyglot.t('nameInvalid') %></small>
+						  </div>
+						  <div class="form-group">
+						    <label for="lastName"><%= polyglot.t('fieldWorkerLastName') %></label>
+						    <input type="text" class="form-control" id="lastName" placeholder="<%= polyglot.t('fieldWorkerLastNamePlaceHolder') %>" value="<%= userInfo.get('lastName') %>" required
+								maxlength="40"> 
+						    <small id="lastNameRequired" hidden="hidden" class="form-text text-muted"><%= polyglot.t('lastNameRequired') %></small>
+						    <small id="lastNameInvalid" hidden="hidden" class="form-text text-muted"><%= polyglot.t('lastNameInvalid') %></small>
+						  </div>
+						  <div class="form-group">
+						  	<label for="email"><%= polyglot.t('fieldWorkerEmail') %></label>
+						    <input type="text" class="form-control" id="email" placeholder="<%= polyglot.t('fieldWorkerEmailPlaceHolder') %>" value="<%= userInfo.get('email') %>" required
+								maxlength="40">
+						    <small id="emailHelp" hidden="hidden" class="form-text text-muted"><%= polyglot.t('fieldWorkerEmailHelp') %></small>
+						    <small id="emailRequired" hidden="hidden" class="form-text text-muted"><%= polyglot.t('emailRequired') %></small>
+						    <small id="emailWrongFormat" hidden="hidden" class="form-text text-muted"><%= polyglot.t('emailWrongFormat') %></small>
+						  </div>
+						  <div class="form-group">
+						    <label for="phone"><%= polyglot.t('fieldWorkerPhone') %></label>
+						    <input type="tel" class="form-control bfh-phone" id="phone" placeholder="<%= polyglot.t('fieldWorkerPhonePlaceHolder') %>"
+								value="<%= userInfo.get('phone') %>" maxlength="40">
+						    <small id="phoneHelp" hidden="hidden" class="form-text text-muted"><%= polyglot.t('fieldWorkerPhoneHelp') %></small>
+						    <small id="phoneRequired" hidden="hidden" class="form-text text-muted"><%= polyglot.t('phoneRequired') %></small>
+						    <small id="phoneNumeric" hidden="hidden" class="form-text text-muted"><%= polyglot.t('phoneNumeric') %></small>
+						  </div>
+						  <button id="cancel" type="button" class="btn btn-danger pull-right">&nbsp;<%= polyglot.t('fieldWorkerCancel') %></button>
+						  <button type="submit" class="btn btn-success pull-right"><i class="glyphicon glyphicon-floppy-saved" ></i>&nbsp;<%= polyglot.t('fieldWorkerSave') %></button>
+						  
+						</form>
+						</div>
+					</div>
+				</div>
+	</div>

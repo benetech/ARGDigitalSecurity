@@ -1,0 +1,38 @@
+<!--
+	Author Daniela Depablos
+	User Account Management Dahsboard 
+	
+	-->
+<div class="row">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="row user-list-header">
+					<div class="col-md-10 col-sm-6 col-xs-8">
+					 	<div class="inner-addon left-addon">
+						    <i class="glyphicon glyphicon-search"></i>
+							<input type="text" id="searchUserMng" class="form-control searchinput" placeholder="<%= polyglot.t('searchTeamUser') %>" />
+		        		</div>
+		        		
+		        		<span id="searchclear" class="searchclear glyphicon glyphicon-remove-circle"></span>
+	        		</div>
+	        		<div class="col-md-2 col-sm-3 col-xs-2">
+							<a id="btnAddUserMng"><i class="fa fa-user-plus big-icon" data-toggle="tooltip"  data-trigger="hover" data-placement="right" title="<%= polyglot.t('tooltipAddUser') %>" aria-hidden="true"></i></a>
+					</div>
+				</div>	
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div>
+						 	<ul id="usersListMng" class="list-group">
+						 	</ul>				 
+				 		</div>
+	        		</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+	
+	<div id="addUserManagementModal">
+
+	</div>
+</div>

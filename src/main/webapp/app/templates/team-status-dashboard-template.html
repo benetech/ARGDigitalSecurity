@@ -1,0 +1,90 @@
+<!--
+	Authors Bryan Barrantes
+			Daniela Depablos
+			Team Status Dashboard data to generate graphics
+			
+			
+	-->
+
+<!--
+	<link href="http://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/css/bootstrap-multiselect.css"
+    rel="stylesheet" type="text/css" />
+	script src="http://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/js/bootstrap-multiselect.js"
+    type="text/javascript"></script-->
+<script type="text/javascript">
+    $(function () {
+        $('#lstUsers').multiselect({
+             allSelectedText: 'All', 
+             numberDisplayed: 1,
+             includeSelectAllOption: true,
+            
+        });
+       
+       
+    });
+    
+    
+	
+	
+</script>
+
+<!-- script src="libs/chartist-js/dist/chartist.min.js" ></script-->
+          
+<div class="row">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					 	<div class="inner-addon left-addon">
+						    <h3><%=polyglot.t('teamStatusDashboardTitle')%></h3>
+		        		</div>
+	        		</div>
+				</div>
+				<div class="row">
+					
+					
+					
+					
+					
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 pull-right"  width="30%" style="right:60px">
+						<select id="lstUsers" multiple="multiple" style="right:60px">
+							<%_.each(usersInfo,function(userInfo) {%>
+						    	<option id="<%= userInfo.id %>" data-id="<%= userInfo.id %>"><%= userInfo.lastName.length >20?userInfo.lastName.substr(0,10):userInfo.lastName %>,&nbsp;<%= (userInfo.firstName.length >20)?userInfo.firstName.substr(0,10):userInfo.firstName %></option> 
+						    <% }) %>
+						</select>
+				
+				
+						</div>
+					
+					<div  class="col-lg-4 col-md-4 col-sm-4 col-xs-4 pull-left" style="right:10px;left:10px">
+						  <button class="btn btn-default dropdown-toggle pull-left" width="30%" type="button" data-toggle="dropdown">
+						  <span id="currentModuleTSD" data-bind="label" class="pull-left">
+	                      	<%=polyglot.t('selectModuleLabel')%>
+						  </span>&nbsp;<span class="caret"></span></button>
+						  <ul  class="dropdown-menu pull-left" role="menu">
+						  	<%_.each(modulesInfo,function(moduleInfo) {%>
+						  		
+						    	<% if ((moduleInfo.status == 'completed') || (moduleInfo.status == 'in-progress')) { %>
+						    		<li id="<%= moduleInfo.id %>" data-id="<%= moduleInfo.id %>"><a><%= moduleInfo.name.length >39?moduleInfo.name.substr(0,20):moduleInfo.name %></a></li>
+						    	<% } %>
+						    	
+						    <% }) %>
+					
+						  </ul>
+					</div>
+					
+				</div>
+				<div class="row">
+					<div class="col-lg-6 col-md-3 col-sm-3 col-xs-6 pull-right" style="top:5px;">
+							<button type="button" id="calculate" class="btn btn-danger" data-toggle="tooltip"  data-trigger="hover" data-placement="right" title="<%= polyglot.t('tooltipShowStatistics') %>" disabled><i class="glyphicon glyphicon-stats" aria-hidden="true"></i></button>		
+					</div>
+				</div>
+				<div id="teamStatusGraphic">
+					
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,43 @@
+<!-- Copyright Benetech Author Daniela Depablos User account management info to display in the principal panel-->
+<ul class="list-group">
+<% _.each(userAccountManagements,function(userAccountManagement) {%>
+<%if(userAccountManagement.active){%>
+<li class="list-group-item user-list-item">
+
+    <div class="row">
+        <div id="removeUserMng" data-id="<%= userAccountManagement.id %>"
+             class="col-md-1 col-sm-1 col-xs-1 pull-right">
+            <a><span>X</span></a>
+        </div>
+        <div id="editUserMngInLst" data-id="<%= userAccountManagement.id %>" class="col-md-1 col-xs-1 pull-right">
+		  			<a><i class="glyphicon glyphicon-pencil"></i></a>
+			</div>
+    </div>
+    <div class="row">
+        <div class="col-md-5">
+            <h4 class="user-header">
+                <%= userAccountManagement.lastName %>,&nbsp;<%=
+                userAccountManagement.firstName %>
+                <%if(!userAccountManagement.accountStatus){%>
+                &nbsp;&nbsp;
+                <a href="#" id="unlockUser">
+                        <span class="glyphicon glyphicon-lock"
+                              data-id="<%= userAccountManagement.id %>"></span>
+                </a>
+                <%}%>
+            </h4>
+            <div class="user-info">
+                <%= userAccountManagement.email %>
+            </div>
+            <div class="user-info">
+                <%= userAccountManagement.phone %>
+            </div>
+        </div>
+
+    </div>
+
+</li>
+<%}%>
+<% }) %>
+
+</ul>

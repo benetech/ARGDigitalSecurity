@@ -1,0 +1,39 @@
+<div class="col-sm-6 col-md-4 col-lg-2 user-module-card">
+    <div class="panel panel-default" id="userIndividual"
+         data-id="<%= moduleUser.id %>">
+
+        <div class="panel-heading" data-toggle="popover"  data-placement="top" data-content="<%=moduleUser.moduleName %>"
+        	style="word-break: break-word;">
+            <%= (moduleUser.moduleName.length>20?moduleUser.moduleName.substr(0,18):moduleUser.moduleName)%>
+        </div>
+        <div class="panel-body">
+            <div class="panel-content user-info">
+                <%= polyglot.t('moduleAssigned') %> :
+                <%= moduleUser.createdDate%>
+            </div>
+            <div style="width:100%;" class="progress-container">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar"
+                         aria-valuenow="<%= moduleUser.stepPerc %>"
+                         aria-valuemin="0" aria-valuemax="100"
+                         style="width: <%= moduleUser.stepPerc %>%; ">
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-footer">
+            <a href="#" id="stepsUserModule" data-id="<%= moduleUser.id %>"
+               class="btn btn-primary" data-toggle="tooltip"  data-trigger="hover" data-placement="right" title="<%= polyglot.t('tooltipShowSteps') %>">
+                <span class="glyphicon glyphicon-eye-open"></span>
+            </a>
+            <%if(moduleUser.status =='assigned' || moduleUser.status =='progress' || moduleUser.status =='not-started'){%>
+            <a href="#" id="removeUserModule" data-id="<%= moduleUser.id %>"
+               class="btn btn-danger" data-toggle="tooltip"  data-trigger="hover" data-placement="right" title="<%= polyglot.t('tooltipRemoveModule') %>">
+                <span class="glyphicon glyphicon-trash"></span>
+            </a>
+            <%}%>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+<!-- Author Andres Oviedo loading user info fieldworkers -->
+<ul class="list-group">
+    <% _.each(userInfos,function(userInfo) {%>
+    <% if(userInfo.linkedToTeam) {%>
+    <li class="list-group-item user-list-item">
+
+        <div class="row">
+            <div class="col-md-1 col-sm-1 col-xs-1 pull-right">
+                
+                <a href="#" id="unlinkUser"><span
+                        data-id="<%= userInfo.id %>">X</span></a>
+            </div>
+            <div id="editUserInLst" data-id="<%= userInfo.id %>" class="col-md-1 col-xs-1 pull-right">
+		  			<a><i class="glyphicon glyphicon-pencil"></i></a>
+			</div>
+            
+        </div>
+        <div class="row" id="userIndividual" data-id="<%= userInfo.id %>">
+            <div class="col-md-5">
+                <div class="user-header">
+                    <%= userInfo.lastName %>,&nbsp;<%= userInfo.firstName %>
+                </div>
+                <div class="user-info">
+                    <%= userInfo.email %>
+                </div>
+                <div class="user-info">
+                    <%= userInfo.phone %>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="user-header">
+                    <%= userInfo.stepsCompleted %>
+                </div>
+                <div style="width:100%;" class="progress-container">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar"
+                             aria-valuenow="<%= userInfo.stepsCompletedAverage %>"
+                             aria-valuemin="0" aria-valuemax="100"
+                             style="width: <%= userInfo.stepsCompletedAverage %>%; ">
+                            
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </li>
+    <% }%>
+    <% }) %>
+
+</ul>

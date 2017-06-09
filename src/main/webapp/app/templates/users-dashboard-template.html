@@ -1,0 +1,89 @@
+<!-- Author Daniela Depablos User Status Dahsboard template -->
+<div class="user-status">
+<div class="row">
+    <h2 class="user-header">
+        <%= userInfoSelected.lastName%>,&nbsp;<%= userInfoSelected.firstName
+        %>
+    </h2>
+    <div class="col-xs-12 col-sm-8 col-md-8" id="userIndividualSelected"
+         data-id="<%= userInfoSelected.id %>">
+        <div class="col-md-5">
+            <ul class="list-group" style="word-wrap: break-word">
+                <li class="list-group-item">
+                    <i class="glyphicon glyphicon-envelope"></i>
+                    <%= userInfoSelected.email %>
+                </li>
+                <li class="list-group-item">
+                    <i class="glyphicon glyphicon-earphone"></i>
+                    <%= userInfoSelected.phone %>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-5">
+            <div class="steps-completed">
+                <%= userInfoSelected.stepsCompleted %>
+            </div>
+            <div style="width:100%;" class="progress-container">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar"
+                         aria-valuenow="<%= userInfoSelected.stepsCompletedAverage %>"
+                         aria-valuemin="0" aria-valuemax="100"
+                         style="width: <%= userInfoSelected.stepsCompletedAverage %>%; ">
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="col-md-2 col-sm-3 col-xs-2">
+            <a id="btnAddModule"><i
+                    class="glyphicon glyphicon-plus-sign pull-right big-icon" 
+                    data-toggle="tooltip"  data-trigger="hover" data-placement="right" title="<%= polyglot.t('tooltipAddModule') %>"
+                    aria-hidden="true"></i></a>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="user-header-title">
+    	<%if(assignedModules.length >0){%>
+        <%= polyglot.t('moduleAssignedTitle') %>
+        <%}%>
+    </div>
+</div>
+<div class="row">
+    <% _.each(assignedModules,function(moduleUser) {%>
+    <%= modulePartial(moduleUser) %>
+    <% }) %>
+</div>
+<div class="row">
+    <div class="user-header-title">
+    	<%if(completedModules.length >0){%>
+        <%= polyglot.t('moduleCompletedTitle') %>
+        <%}%>
+    </div>
+</div>
+<div class="row">
+    <% _.each(completedModules,function(moduleUser) {%>
+    <%= modulePartial(moduleUser) %>
+    <% }) %>
+</div>
+<%if(otherModules.length >0){%>
+<div class="row">
+    <div class="user-header-title">
+    	
+        <%= polyglot.t('otherTitle')%>
+        
+    </div>
+</div>
+<%}%>
+<div class="row">
+    <% _.each(otherModules,function(moduleUser) {%>
+    <%= modulePartial(moduleUser) %>
+    <% }) %>
+</div>
+
+<div id="stepsModal">
+</div>
+
+</div>

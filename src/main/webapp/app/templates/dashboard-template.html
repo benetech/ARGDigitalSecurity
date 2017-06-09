@@ -1,0 +1,82 @@
+<script>
+	
+</script>
+<nav style="background-color:white;" class="navbar sidebar" role="navigation">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div style=" box-shadow: 5px 5px 5px #888888;" class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-sidebar-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span style="background-color:#CCCCCC;" class="icon-bar"></span>
+                <span style="background-color:#CCCCCC;" class="icon-bar"></span>
+                <span style="background-color:#CCCCCC;" class="icon-bar"></span>
+            </button>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div style="background-color:white;" class="collapse navbar-collapse"
+             id="bs-sidebar-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="selected"><a href="#index" data-toggle="tooltip"   data-trigger="hover" data-placement="bottom" title="<%= polyglot.t('teamManagement') %>">
+                    <div class="nav-item-title">
+                        <%= polyglot.t('teamManagement') %>
+                    </div>
+                    <span class="dashboard-icon hidden-xs showopacity fa fa-user"></span></a>
+                </li>
+                <% if (LoginStatus.get('role').name === 'admin') { %>
+                <li><a href="#users" data-toggle="tooltip"  data-trigger="hover" data-placement="top" title="<%= polyglot.t('accountManagement') %>">
+                    <div class="nav-item-title">
+						<%= polyglot.t('accountManagement') %>
+					</div>
+                    <span class="dashboard-icon hidden-xs showopacity fa fa-users"></span></a>
+                </li>
+                <% } %>
+                <li><a href="#modules" data-toggle="tooltip"  data-trigger="hover" data-placement="top" title="<%= polyglot.t('moduleManagement') %>">
+                    <div class="nav-item-title">
+                    	<%= polyglot.t('moduleManagement') %>
+                   	</div>
+                    <span class="dashboard-icon hidden-xs showopacity fa fa-list-ul"></span></a>
+                </li>
+                <li><a href="#teamstatus" data-toggle="tooltip"  data-trigger="hover" data-placement="top" title="<%= polyglot.t('teamStatusDashboard') %>">
+                    <div class="nav-item-title">
+                    	<%= polyglot.t('teamStatusDashboard') %>
+                    </div>
+                    <span class="dashboard-icon hidden-xs showopacity fa fa-shield"></span></a>
+                </li>
+                
+                <li class="dropdown"><a class="dropdown-toggle" id="user-logged" href="#" data-toggle="dropdown" data-placement="top" title="<%= polyglot.t('userLogged') %>">
+                    <div class="nav-item-title">
+						<%= polyglot.t('userLogged') %>
+					</div>
+					 <span class="dashboard-icon hidden-xs showopacity fa fa-cog"></span></a>
+                    <ul class="dropdown-menu">
+                    	<li>&nbsp;&nbsp;&nbsp;<b><%= polyglot.t('user') %>: </b><%= LoginStatus.get('username')%></li>
+                    	<li>&nbsp;&nbsp;&nbsp;<b><%= polyglot.t('role') %>: </b><%= LoginStatus.get('role').name%></li>
+                    	<li><button id="btnChngPwd" class="btn btn-link"><%= polyglot.t('changePasswordLabel') %></button></li>                  	
+                    </ul>
+                </li>
+                
+                
+                <li><a id="logout-btn" href="#" data-toggle="tooltip" data-trigger="hover"	  data-placement="top" title="<%= polyglot.t('logout') %>">
+                    <div class="nav-item-title">
+						<%= polyglot.t('logout') %>
+					</div>
+                    <span class="dashboard-icon hidden-xs showopacity fa fa-sign-out"></span></a>
+                </li>
+
+                <li>
+                	<br>
+                	<div class="user-header">Beta 0.2.5</div>
+                	<br>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="main" id="dashboardContent">
+
+</div>
+<div class="main" id="msgPwd">
+
+</div>
+

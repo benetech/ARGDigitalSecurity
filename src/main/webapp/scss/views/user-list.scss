@@ -1,0 +1,106 @@
+.inner-addon {
+  position: relative;
+}
+
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+.left-addon .glyphicon {
+  left: 0px;
+}
+
+.right-addon .glyphicon {
+  right: 0px;
+}
+
+.left-addon input {
+  padding-left: 30px;
+}
+
+.right-addon input {
+  padding-right: 30px;
+}
+
+.big-icon {
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.user-list-header {
+  width: 100%;
+  padding-bottom: 10px !important;
+  box-shadow: 0px 7px 5px -5px rgba(0, 0, 0, 0.19);
+  position: relative;
+}
+
+.user-header {
+  color: black;
+  word-wrap: break-word;
+}
+
+.user-info {
+  color: black;
+  font-size: 12px;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.steps-completed {
+  color: black;
+  font-size: 18px;
+  text-align: right;
+}
+
+.user-module-card .panel .panel-footer {
+  overflow: hidden;
+}
+
+.user-module-card .panel .panel-footer a:first-child {
+  float: left;
+}
+
+.user-module-card .panel .panel-footer a:last-child {
+  float: right;
+}
+
+.progress-container {
+  width: 100%;
+}
+
+.progress-container > .progress {
+  margin-bottom: 7px;
+}
+
+.list-group {
+  padding-top: 10px;
+}
+
+.row-fluid {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.list-group-item {
+  cursor: pointer;
+}
+
+.list-group-item:hover {
+  background-color: #f1f1f1 !important;
+  transition: transform 0.5s;
+  z-index: 1000;
+}
+
+.dashboard-column {
+  padding-left: 0px !important;
+  padding-right: 7px !important;
+}
+
+.user-list-item > .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+  padding-left: 0px !important;
+  padding-right: 7px !important;
+}
+
+

@@ -1,0 +1,21 @@
+<!--
+	Author Andres Oviedo
+	Template View for the notification message
+	
+	-->
+<% if(notification.get("idTypeMessage")===1) { %> 
+	<div class="alert alert-success fade in notification">
+	    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+		<%= polyglot.t(notification.get("code")) %>
+	</div>
+<% }else if(notification.get("idTypeMessage")===2) { %>
+	<div class="alert alert-warning fade in notification">
+	    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+	 	<%= polyglot.t(notification.get("code")) %>
+	</div>
+<% }else if(notification.get("idTypeMessage")===3) { %>
+	<div class="alert alert-danger fade in notification">
+	    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+	  	<%= polyglot.t(notification.get("code")) %>
+	</div>
+<% } %>

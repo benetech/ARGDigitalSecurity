@@ -1,0 +1,50 @@
+<div class="modal-dialog" id="modalAddModule">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button id="closeAddModule" type="button" class="close"
+                     aria-hidden="true">&times;</button>
+            <h4 class="modal-title"><%= polyglot.t('titleModule') %></h4>
+        </div>
+        <div class="modal-body">
+			<%var i=0;%>
+            <ul class="list-group">
+                <%_.each(modulesInfo,function(moduleInfo) {%>
+                	
+                	<%_.each(userModule,function(userInfo) {%>
+                		<%if(userInfo.moduleId === moduleInfo.id){
+                			moduleInfo.active=false;
+                		}%>
+                	<% }) %>	
+                <%if(moduleInfo.active && moduleInfo.status=='not-started'){%>	
+                	<% i = i+1;%>
+                <li class="list-group-item user-list-item">
+                    <div class="row" id="moduleUserDiv"
+                         data-id="<%= moduleInfo.id %>">
+                        <div class="col-md-5">
+                            <div class="user-header">
+                                <%= moduleInfo.name %>
+                            </div>
+                            <div class="user-info">
+                                <%= moduleInfo.description %>
+                            </div>
+                            <div class="user-info">
+                                <%= moduleInfo.status %>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <%}%>
+                <% }) %>
+                <% if(i==0){%>
+                	 <li class="list-group-item user-list-item">
+                	 	<div class="row">
+                	 		<small id="moduleNon"  class="form-text text-muted"><%= polyglot.t('nonModuleDisplay') %></small>
+                	 	</div>
+                	 </li>
+                <% }%>
+            </ul>
+
+        </div>
+
+    </div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->

@@ -1,0 +1,13 @@
+/**
+ * 	Author Andres Oviedo
+ * 
+ * Styles for the message notification view 
+ */
+.notification {
+  width: 100%;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}

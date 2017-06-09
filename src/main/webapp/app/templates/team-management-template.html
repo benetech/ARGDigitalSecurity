@@ -1,0 +1,51 @@
+<!--
+	Author Andres Oviedo
+	
+	Manage all the fieldworkers data
+	
+	to create, enroll fieldworkers in the modules
+	
+-->	
+<script>
+	
+
+</script>
+<div class="row">
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 dashboard-column">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="row user-list-header">
+                    <div class="col-md-10 col-sm-9 col-xs-10">
+                    	<div class="inner-addon left-addon">
+                    		
+                    		<i class="glyphicon glyphicon-search"></i>
+                    		<input id="searchUser" type="text" class="form-control searchinput" >
+                    		</div>
+                        	 
+                        	<span id="searchclear" class="searchclear glyphicon glyphicon-remove-circle"></span>
+						
+							
+                        
+                    </div>
+                    <div class="col-md-2 col-sm-3 col-xs-2">
+                        <a id="btnAddUser"><i class="fa fa-user-plus big-icon" data-toggle="tooltip"  data-trigger="hover" data-placement="right" title="<%= polyglot.t('tooltipAddUser') %>"
+                                              aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div id="usersList" >
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default col-md-9 col-sm-9 col-xs-12 dashboard-column">
+        <div id="userStatusDashboard" class="panel-body">
+
+        </div>
+
+    </div>
+    <div id="addUserModal">
+
+    </div>
+    <div id="userModuleModal">
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<!--  Author Daniela Depablos Modal Steps for the user module in the user status dashboard -->
+<div class="modal-dialog modal-sm" id="modalSteps">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button id="closeSteps" type="button" class="close" aria-hidden="true">&times;</button>
+      <h4 class="modal-title"><%= polyglot.t('stepsTrainingTitle')%></h4>
+    </div>
+    <div class="modal-body">
+   <ul>
+<% _.each(steps,function(step) {%>
+		
+	<li  class="list-group-item">
+		<div class="panel-content user-info"  data-id="<%= step.id %>" >
+				<%= step.name%> 
+			</div>
+		
+	
+	</li>
+	<% }) %>
+	</ul>
+	</div>
+  </div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->
