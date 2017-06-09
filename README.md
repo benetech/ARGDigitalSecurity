@@ -1,4 +1,4 @@
-# DigitalSecurityARG
+# ARGDigitalSecurity
 
 This is a prototype developed by Benetech in an attempt to create a artificial reality platform for testing digital security best practices. The tool is intended to be used by organizational leaders to enroll their fieldworkers in digital security simulations in order to test their readiness, assess the efficacy of training materials, and provide in-context training in response to real-time actions taken in the simulations.
 
